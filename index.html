@@ -362,36 +362,63 @@
     </div>
   </section>
 
-  <!-- CTA / Book -->
+  <!-- CTA / Contact -->
   <section class="section py-5" id="book">
     <div class="container py-lg-5">
-      <div class="cta-card rounded-4 border-0 shadow-lg overflow-hidden">
-        <div class="row g-0">
-          <div class="col-lg-5 cta-visual">
-            <svg viewBox="0 0 360 360" width="100%" height="100%" aria-label="Ready to explore">
-              <rect width="360" height="360" fill="#2d7d71"/>
-              <circle cx="60" cy="70" r="40" fill="#ffe08a"/>
-              <path d="M0 210 Q90 150 180 200 T360 180 L360 360 L0 360 Z" fill="#1f5f56"/>
-              <g fill="#1c564d" opacity="0.8"><path d="M120 360 C100 280 128 245 145 190 C135 245 168 280 150 360 Z"/><path d="M220 360 C200 270 235 230 255 175 C243 230 280 270 260 360 Z"/></g>
+      <div class="row gx-4 gy-4">
+        <div class="col-lg-6 contact-visual">
+          <div class="contact-visual-card">
+            <svg viewBox="0 0 360 420" width="100%" height="100%" aria-label="Ready to explore">
+              <rect width="360" height="420" fill="#2d7d71"/>
+              <rect width="360" height="420" fill="url(#lake-grad)"/>
+              <defs>
+                <linearGradient id="lake-grad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#5fe0cd" stop-opacity="0.9"/>
+                  <stop offset="1" stop-color="#164b43" stop-opacity="0.95"/>
+                </linearGradient>
+              </defs>
+              <circle cx="82" cy="108" r="58" fill="#ffe08a" opacity="0.95"/>
+              <path d="M0 230 C110 185 170 235 270 208 C320 197 360 224 360 224 L360 420 L0 420 Z" fill="#1f5f56"/>
+              <path d="M0 300 C120 268 200 305 360 275 L360 420 L0 420 Z" fill="#15433c"/>
+              <g fill="#123a32" opacity="0.9">
+                <path d="M150 420 C128 335 158 300 178 245 C166 300 206 335 162 420 Z"/>
+                <path d="M258 420 C236 325 272 280 298 210 C283 278 326 325 200 420 Z"/>
+              </g>
             </svg>
           </div>
-          <div class="col-lg-7 cta-form-wrapper">
-            <div class="cta-form">
-              <h2 class="fw-bold text-dark mb-2" style="font-size: clamp(1.6rem, 3vw, 2.2rem)">Start your green escape</h2>
-              <p class="text-secondary mb-4">Tell us where you dream to wander and we'll craft the trail.</p>
-              <form id="bookForm" class="row g-3" novalidate>
-                <div class="col-md-6"><label class="form-label small fw-semibold">Full name</label><input type="text" class="form-control" placeholder="Jane Doe" required></div>
-                <div class="col-md-6"><label class="form-label small fw-semibold">Email</label><input type="email" class="form-control" placeholder="jane@example.com" required></div>
-                <div class="col-md-6"><label class="form-label small fw-semibold">Preferred destination</label>
-                  <select class="form-select">
-                    <option>Ha Long Bay Kayak</option><option>Trang An Boat Journey</option><option>Cau Dat Falls Trek</option><option>Any adventure</option>
-                  </select>
-                </div>
-                <div class="col-md-6"><label class="form-label small fw-semibold">Travel date</label><input type="date" class="form-control"></div>
-                <div class="col-12"><button type="submit" class="btn btn-tw-teal btn-lg fw-semibold px-5 rounded-pill w-100">Request Itinerary</button></div>
-                <div class="col-12 text-success fw-medium small d-none" id="bookSuccess">Thanks! We'll be in touch within 24 hours 🌿</div>
-              </form>
-            </div>
+        </div>
+        <div class="col-lg-6 contact-form-side">
+          <div class="contact-form">
+            <span class="contact-eyebrow">Get started</span>
+            <h2 class="fw-black">Start your green escape</h2>
+            <p class="contact-subtext">Tell us where you dream to wander and we'll craft the trail.</p>
+            <form class="row g-3" novalidate>
+              <div class="col-12">
+                <label class="form-label small fw-semibold">Full name</label>
+                <input type="text" class="form-control" placeholder="Jane Doe" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Email</label>
+                <input type="email" class="form-control" placeholder="jane@example.com" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Preferred destination</label>
+                <select class="form-select">
+                  <option>Ha Long Bay Kayak</option>
+                  <option>Trang An Boat Journey</option>
+                  <option>Cau Dat Falls Trek</option>
+                  <option>Any adventure</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-semibold">Travel date</label>
+                <input type="date" class="form-control" style="max-width: 34%;">
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-tw-teal btn-lg fw-semibold px-5 rounded-pill w-100">Request Itinerary</button>
+              </div>
+              <div class="col-12 text-center text-success fw-medium small mt-3 d-none" id="bookSuccess">Thanks! We'll be in touch within 24 hours 🌿</div>
+            </form>
           </div>
         </div>
       </div>
