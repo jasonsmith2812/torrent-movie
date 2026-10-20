@@ -1,0 +1,6 @@
+﻿# Local screenshots (generated / test output)
+screenshots/
+
+# Local node dependencies (this page loads jQuery + Bootstrap via CDN,
+# so node_modules is normally absent, but ignore it to be safe)
+node_modules/
