@@ -19,6 +19,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -70,6 +73,71 @@
       </li>
     </ul>
 
+    <!-- ===== Destination Highlights ===== -->
+    <section class="destinations-list" aria-labelledby="dest-heading">
+      <div class="section-head">
+        <h2 id="dest-heading">  Destination Highlights</h2>
+        <span class="section-tag">  WHERE IT BEGINS<span class="dot"></span></span>
+      </div>
+
+      <ul class="destinations-grid">
+        <li class="destination">
+          <div class="dest-body">
+            <h3 class="card-title">  Cần Thơ</h3>
+            <p class="card-loc">  The Mekong capital</p>
+            <ul class="card-desc">
+              <li>Floating houses &amp; coconut islets on the delta river</li>
+              <li>Fruit markets, sunrise boat trips &amp; riverside lantern walks</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="destination">
+          <div class="dest-body">
+            <h3 class="card-title">  Vĩnh Long</h3>
+            <p class="card-loc">  Paddy fields &amp; floating markets</p>
+            <ul class="card-info">
+              <li>Green floodplains, reed forests &amp; slow-paced river towns</li>
+              <li>Rice-paper lanterns, lotus fields &amp; quiet community stays</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="destination">
+          <div class="dest-body">
+            <h3 class="card-title">  Châu Đốc</h3>
+            <p class="card-loc">  Temples &amp; the dragon-burning festival</p>
+            <ul class="card-info">
+              <li>Five pagodas along the riverside &amp; ancient carvings</li>
+              <li>Long-tail boat rides to caves &amp; the floating markets</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="destination">
+          <div class="dest-body">
+            <h3 class="card-title">  Phan Thiết</h3>
+            <p class="card-loc">  Coastal capital &amp; deep-sea fishing</p>
+            <ul class="card-info">
+              <li>Long waves along the coast &amp; the famous ocean rowing race</li>
+              <li>Phoenix fruit in season &amp; fishing-boats to hidden reefs</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="destination">
+          <div class="dest-body">
+            <h3 class="card-title">  Lâm Đồng</h3>
+            <p class="card-loc">  Misty highlands &amp; coffee valleys</p>
+            <ul class="card-info">
+              <li>Fog-wrapped mountains &amp; the flower fields in bloom</li>
+              <li>Highland coffee estates &amp; night markets under the stars</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
     <!-- ===== Route Tours ===== -->
     <section id="routes" class="routes-list" aria-labelledby="routes-heading">
       <div class="section-head">
@@ -115,7 +183,7 @@
           <svg viewBox="0 0 210 200"><g fill="#f78fb3"><ellipse cx="60" cy="148" rx="24" ry="14"/><ellipse cx="60" cy="138" rx="16" ry="10"/></g></svg>
         </div>
         <div class="route-body">
-          <span class="route-badge">  CHẲU ĐỐC</span>
+          <span class="route-badge">  CHÂU ĐỐC</span>
           <h3 class="route-title">  Trà Sư Water Lily Forest</h3>
           <p class="route-desc">Floating pink lily fields &amp; the Mekong tram forest at high season.</p>
           <div class="route-tags">
@@ -131,7 +199,7 @@
           <svg viewBox="0 0 210 200"><g fill="#f6d76b"><path d="M150 80c0-24 16-44 40-44 2 20-6 38-16 46 8 6 12 14 8 22-14 0-24-12-24-28 6 6 14 6 14-6"/></g></svg>
         </div>
         <div class="route-body">
-          <span class="route-badge">  PHAN THIỆT</span>
+          <span class="route-badge">  PHAN THIẾT</span>
           <h3 class="route-title">Island of Phú Quý</h3>
           <p class="route-desc">Rugged reefs, crystal lagoons &amp; endless snorkeling off the coast.</p>
           <div class="route-tags">
@@ -147,7 +215,7 @@
           <svg viewBox="0 0 210 200"><g fill="#8fb89a" stroke="#4c6a51" stroke-width="1"><polygon points="60 96 108 44 156 96"/></g></svg>
         </div>
         <div class="route-body">
-          <span class="route-badge">  LÀM ĐỒNG</span>
+          <span class="route-badge">  LÂM ĐỒNG</span>
           <h3 class="route-title">  Bảo Lộc – Đà Lạt</h3>
           <p class="route-desc">Foggy mountains, highland coffee &amp; blooming terrace gardens.</p>
           <div class="route-tags">
@@ -161,7 +229,9 @@
 
     <!-- ===== Why NASA ===== -->
     <section id="about" class="features-list" aria-labelledby="why-heading">
-      <h2 id="why-heading">  Why NASA Tourist?</h2>
+      <div class="section-head">
+      	<h2 id="why-heading">  Why NASA Tourist?</h2>
+      </div>
       <ul class="features-grid">
         <li class="feature">
           <svg class="feature-icon" aria-hidden="true" viewBox="0 0 46 46"><circle cx="23" cy="23" r="22" fill="#dcf5e6"/><path d="M23 12c-2 3-6 5-6 10 0 5 6 8 12 7 5 0 10-2 10-7 0-5-4-7-6-9-4 1-9 0-10 9z" fill="#0f9e68"/><animateTransform attributeName="transform" type="rotate" values="0 23 23; 10 23 23; 0 23 23; -10 23 23" dur="6s" repeatCount="indefinite"/></svg>
@@ -203,6 +273,20 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('a[href^="#"]').on('click', function (e) {
+        var target = this.getAttribute('href');
+        if (!target || target === '#' || target.length < 2) return;
+        var $target = $(target);
+        if ($target.length) {
+          e.preventDefault();
+          $('html,body').animate({ scrollTop: $target.offset().top - 24 }, 650, 'swing');
+        }
+      });
+    });
+  </script>
+
   </main>
 </body>
 </html>
