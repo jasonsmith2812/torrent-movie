@@ -1,0 +1,302 @@
+/* ============================================================
+   NASA Tourist — Vietnam travel landing page
+   Design tokens & core styles (extracted from inline styles)
+   ============================================================ */
+
+/* ---- Design tokens ---- */
+:root {
+  --green-900: #0a4a31;
+  --green-700: #0f9e68;
+  --green-soft: #3a5a4a;
+  --gold: #ffce4a;
+  --gold-text: #ffdf8f;
+  --cyan: #66e0ff;
+  --pill-bg: #e6f6ea;
+  --shadow-dark: rgba(9, 60, 38, 0.18);
+  --shadow-soft: rgba(9, 60, 38, 0.06);
+  --shadow-item: rgba(9, 60, 38, 0.07);
+}
+
+/* ---- Minimal box-sizing reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ---- Typography & page ---- */
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', system-ui, sans-serif;
+  color: var(--green-900);
+  background: #edf9f0;
+  line-height: 1.5;
+}
+
+a { text-decoration: none; color: inherit; }
+img, svg { display: block; max-width: 100%; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* ---- Accent color variants used per route card ---- */
+.route-teal   { --accent: #0f9e68; }
+.route-orange { --accent: #b8701f; }
+.route-rose   { --accent: #a3345f; }
+.route-blue   { --accent: #1f6f9c; }
+.route-pine   { --accent: #247352; }
+
+/* ---- Focus visibility (keyboard / screen-reader) ---- */
+a:focus-visible, button:focus-visible { outline: 2px solid var(--green-700); outline-offset: 2px; }
+
+/* ============================================================
+   Layout shell
+   ============================================================ */
+.wrapper {
+  width: 960px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #dff6e5 0%, #edf9f0 100%);
+  padding: 28px 34px 20px;
+  position: relative;
+  box-shadow: 0 20px 60px var(--shadow-dark);
+}
+
+/* ============================================================
+   Header & brand
+   ============================================================ */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand svg { width: 40px; height: 40px; }
+.brand-name { font-size: 24px; font-weight: 800; letter-spacing: .3px; color: var(--green-900); }
+.brand-name .accent { color: var(--green-700); }
+
+.main-nav { display: flex; gap: 26px; }
+.main-nav a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-900);
+  padding: 4px 2px;
+}
+.main-nav a:hover { color: var(--green-700); }
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(120deg, #0f9e68 0%, #0a4a31 100%);
+  border-radius: 26px;
+  padding: 38px 40px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.hero-content { position: relative; z-index: 2; }
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 206, 74, 0.18);
+  border: 1.5px solid rgba(255, 206, 74, 0.55);
+  color: var(--gold-text);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-bottom: 18px;
+}
+.hero-title { margin: 0; font-size: 46px; line-height: 1.02; font-weight: 800; letter-spacing: -.5px; }
+.hero-desc { margin: 16px 0 0; max-width: 310px; font-size: 16.5px; line-height: 1.55; opacity: .92; }
+
+.btn-row { display: flex; gap: 14px; margin-top: 28px; }
+.btn {
+  padding: 13px 24px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-primary { background: var(--gold); color: var(--green-900); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); }
+.btn-secondary { padding: 13px 24px; border: 1.5px solid #a6f0c0; border-radius: 12px; font-weight: 700; font-size: 15px; color: #a6f0c0; background: transparent; }
+.btn-row .btn { flex: 1 1 auto; }
+
+/* ============================================================
+   Stat strip
+   ============================================================ */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+.stat {
+  background: #fff;
+  border-radius: 20px;
+  padding: 26px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 6px 18px var(--shadow-soft);
+}
+.stat-icon { width: 52px; height: 52px; flex-shrink: 0; }
+.stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--green-700); font-weight: 700; }
+.stat-value { font-size: 22px; font-weight: 800; color: var(--green-900); }
+
+/* ============================================================
+   Route tours
+   ============================================================ */
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  margin-top: 34px;
+}
+.section-title { font-size: 26px; font-weight: 800; color: var(--green-900); letter-spacing: -.3px; }
+.section-tag { font-size: 12px; color: var(--green-700); font-weight: 700; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 8px; }
+.section-tag .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--green-700); display: inline-block; }
+
+.routes-list { display: flex; flex-direction: column; gap: 16px; }
+
+.route {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 22px var(--shadow-item);
+  border-left: 5px solid var(--accent);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px 20px;
+}
+.route-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: var(--t);
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 2px 8px rgba(9, 60, 38, 0.15);
+  flex-shrink: 0;
+}
+.route-body { flex: 1; }
+.route-badge { font-size: 11.5px; font-weight: 700; letter-spacing: 1px; color: var(--accent); }
+.route-title { font-size: 19px; font-weight: 800; color: var(--green-900); margin-bottom: 5px; line-height: 1.1; }
+.route-desc { font-size: 13.5px; line-height: 1.5; color: var(--green-soft); }
+.route-tags { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.route-tag { font-size: 11.5px; font-weight: 800; color: var(--green-900); background: var(--pill-bg); padding: 4px 11px; border-radius: 999px; }
+.route-tag.type { background: #e3efe7; }
+.route-price { font-size: 12.5px; font-weight: 800; color: var(--accent); margin-left: auto; }
+
+/* per-route gradient + type-pill tint overrides */
+.route-teal   { --t: linear-gradient(160deg, #7fd8b0, #38c98a); } .route-teal   .route-tag.type { background: #e6f6ea; }
+.route-orange { --t: linear-gradient(160deg, #ffd479, #f4a13a); } .route-orange .route-tag.type { background: #faf1e0; }
+.route-rose   { --t: linear-gradient(160deg, #f78fb3, #d14b86); } .route-rose   .route-tag.type { background: #faeef1; }
+.route-blue   { --t: linear-gradient(160deg, #7fd8ff, #2e9fd6); } .route-blue   .route-tag.type { background: #e5f1f8; }
+.route-pine   { --t: linear-gradient(160deg, #a4e4c8, #3f8f6b); } .route-pine   .route-tag.type { background: #e3efe7; }
+
+/* ============================================================
+   Why NASA — feature grid
+   ============================================================ */
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
+.feature {
+  background: #fff;
+  border-radius: 22px;
+  padding: 26px 20px;
+  box-shadow: 0 8px 20px var(--shadow-soft);
+}
+.feature-icon { width: 46px; height: 46px; margin-bottom: 14px; }
+.feature-title { font-size: 16px; font-weight: 800; color: var(--green-900); margin-bottom: 6px; }
+.feature-desc { font-size: 13px; color: var(--green-soft); line-height: 1.5; }
+
+/* ============================================================
+   CTA banner
+   ============================================================ */
+.cta {
+  margin-top: 34px;
+  background: linear-gradient(120deg, #0a4a31 0%, #0f9e68 100%);
+  border-radius: 28px;
+  padding: 40px 44px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cta-text { position: relative; z-index: 2; }
+.cta-badge { font-size: 14px; font-weight: 700; letter-spacing: 1.4px; color: var(--gold); margin-bottom: 10px; display: block; }
+.cta-title { margin: 0 0 10px; font-size: 32px; font-weight: 800; letter-spacing: -.3px; }
+.cta-desc { margin: 0; opacity: .9; font-size: 15.5px; max-width: 300px; }
+.cta-btn {
+  background: var(--gold);
+  color: var(--green-900);
+  padding: 16px 30px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+  display: inline-block;
+  z-index: 2;
+  text-decoration: none;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: var(--green-soft);
+}
+
+/* ============================================================
+   Responsive — tablet & mobile
+   ============================================================ */
+@media (max-width: 900px) {
+  .card { padding: 24px 20px; }
+  .wrapper { padding: 0 16px; }
+  .hero { padding: 34px 28px; }
+  .btn-row { flex-wrap: wrap; }
+  .btn-row .btn { flex: 1 1 44%; }
+  .hero-title { font-size: 38px; }
+}
+
+@media (max-width: 720px) {
+  .main-nav { gap: 16px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .section-head { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .site-header { flex-wrap: wrap; gap: 12px; }
+  .site-footer { flex-direction: column; gap: 6px; text-align: center; }
+  .cta { flex-direction: column; text-align: center; gap: 20px; }
+  .cta-title { font-size: 26px; }
+}
+
+@media (max-width: 480px) {
+  .wrapper { padding: 0 14px; }
+  .main-nav { gap: 10px; font-size: 12px; }
+  .stats { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .hero { flex-direction: column; text-align: center; gap: 18px; }
+  .hero-content { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .hero-badge { margin-bottom: 0; }
+  .hero-desc { max-width: none; }
+  .hero-title { font-size: 32px; }
+  .cta { padding: 30px 24px; }
+  .cta-title { font-size: 24px; }
+}
