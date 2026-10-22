@@ -141,7 +141,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--green-700); out
 /* ============================================================
    Stat strip
    ============================================================ */
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; justify-content: center; }
 .stat {
   background: #fff;
   border-radius: 20px;
@@ -297,10 +297,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--green-700); out
 
 @media (max-width: 720px) {
   .main-nav { gap: 16px; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .features-grid { grid-template-columns: repeat(2, 1fr); }
-  .destinations-grid { flex-wrap: wrap; }
-  .destination { flex: 0 1 100%; }
+  .stats { display: flex; flex-direction: column; gap: 18px; }
+  .stat-text { width: 100%; }
+  .stat { grid-template-columns: none; flex-direction: row; align-items: center; text-align: center; gap: 14px; padding: 32px 18px; }
+  .stat-icon { width: 72px; height: 72px; }
+  .features-grid,
+  .destinations-grid { grid-template-columns: repeat(2, 1fr); }
   .section-head { flex-direction: column; gap: 8px; align-items: flex-start; }
   .site-header { flex-wrap: wrap; gap: 12px; }
 
@@ -309,4 +311,4 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--green-700); out
   .cta-title { font-size: 26px; }
 }
 
-.cta-title { font-size: 24px; }
+

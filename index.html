@@ -19,10 +19,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "NASA Tourist",
+    "logo": "https://nasatourist.vn/",
+    "url": "https://nasatourist.vn/",
+    "email": "hello@nasatourist.vn",
+    "address": { "@type": "PostalAddress", "addressLocality": "Ho Chi Minh City", "addressCountry": "VN" },
+    "priceRange": "$$",
+    "description": "Eco-friendly journeys across Vietnam: Mekong islands, lily forests & misty highlands."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "NASA Tourist",
+    "url": "https://nasatourist.vn/",
+    "offers": [
+      { "@type": "Offer", "itemOffered": { "@type": "Tour", "name": "Cotton Thoi Son Mekong islands", "description": "Coconut-palm homes, river cooking & a quiet kayak ride across the Mekong Delta.", "duration": "P05D", "priceCurrency": "USD", "price": "480" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Tour", "name": "Ancient Craft & Lan Wung", "description": "Handmade craft villages & botanical Lan Wung gardens.", "duration": "P06D", "priceCurrency": "USD", "price": "360" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Tour", "name": "Tra Su Water Lily Forest", "description": "Floating pink lily fields & the Mekong tram forest at high season.", "duration": "P04D", "priceCurrency": "USD", "price": "290" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Tour", "name": "Island of Phu Quy", "description": "Rugged reefs, crystal lagoons & endless snorkeling off the coast.", "duration": "P07D", "priceCurrency": "USD", "price": "520" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Tour", "name": "Bao Loc – Da Lat", "description": "Foggy mountains, highland coffee & blooming terrace gardens.", "duration": "P08D", "priceCurrency": "USD", "price": "610" } }
+    ]
+  }
+  </script>
+
 </head>
 <body>
   <main class="card" aria-labelledby="main-heading">
@@ -35,7 +64,7 @@
       </div>
       <nav aria-label="Primary">
         <ul class="main-nav">
-          <li><a href="#routes">Destinations</a></li>
+          <li><a href="#destinations">Destinations</a></li>
           <li><a href="#routes">Routes</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#why">Support</a></li>
@@ -74,7 +103,7 @@
     </ul>
 
     <!-- ===== Destination Highlights ===== -->
-    <section class="destinations-list" aria-labelledby="dest-heading">
+    <section id="destinations" class="destinations-list" aria-labelledby="dest-heading">
       <div class="section-head">
         <h2 id="dest-heading">  Destination Highlights</h2>
         <span class="section-tag">  WHERE IT BEGINS<span class="dot"></span></span>
